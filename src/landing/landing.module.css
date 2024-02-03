@@ -1,0 +1,102 @@
+.landing {
+  position: relative;
+  display: block;
+  min-height: 100dvh;
+  width: 100dvw;
+}
+
+.nav {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: clamp(20px, 2vw, 25px);
+  padding: clamp(30px, 3vw, 100px);
+  z-index: 1;
+}
+
+.creditContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  overflow: hidden;
+}
+
+.creditContainer:hover .credit {
+  transform: rotate(360deg);
+  transition: all 0.3s ease-in;
+}
+
+.creditContainer:hover .codeby {
+  transform: translateX(-100%);
+  transition: all 0.3s ease-in;
+}
+
+.creditContainer:hover .name {
+  transform: translateX(-35%);
+  transition: all 0.3s ease-in;
+}
+
+.creditContainer:hover .name p:nth-child(2) {
+  display: block;
+  transition: all 0.3s ease-in;
+}
+
+.credit {
+  transition: all 0.3s ease-in;
+}
+
+.nameContainer {
+  position: relative;
+  display: flex;
+}
+
+.codeby {
+  transition: all 0.3s ease-in;
+}
+
+.nameContainer p {
+  padding-right: 5px;
+}
+
+.name {
+  position: relative;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease-in;
+}
+
+.name p {
+  padding-right: 5px;
+}
+
+.name p:nth-of-type(2) {
+  display: none;
+  transition: all 0.3s ease-in;
+}
+
+.navContainer {
+  position: relative;
+  display: flex;
+  gap: clamp(10px, 3vw, 30px);
+}
+
+.navLink {
+  position: relative;
+  overflow: hidden;
+  height: fit-content;
+}
+
+.navLink:hover::after {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  background-color: white;
+  bottom: 0;
+  left: 50%;
+  transition: all 1s ease-in;
+}

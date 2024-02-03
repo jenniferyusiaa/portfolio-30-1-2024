@@ -1,0 +1,67 @@
+.slidingImages {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  gap: 60px;
+  overflow: unset;
+  z-index: 1;
+}
+
+.firstLine,
+.secondLine {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.firstImages,
+.secondImages {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.slidingImages img {
+  height: clamp(200px, 30vw, 400px);
+  width: clamp(300px, 40vw, 600px);
+}
+
+.slidingImages video {
+  height: clamp(200px, 30vw, 400px);
+  width: clamp(300px, 40vw, 600px);
+}
+
+.videoContainer video {
+  width: clamp(260px, 36vw, 520px);
+}
+
+.videoContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: clamp(200px, 30vw, 400px);
+  width: clamp(300px, 40vw, 600px);
+  background-color: rgba(255, 192, 203, 0.753);
+}
+
+.circleContainer {
+  position: relative;
+  width: 100%;
+  overflow: unset;
+}
+
+.circle {
+  height: 1550%;
+  width: 120%;
+  left: -10%;
+  border-radius: 0 0 50% 50%;
+  background-color: white;
+  z-index: 1;
+  position: absolute;
+  box-shadow: 0px 60px 50px rgba(0, 0, 0, 0.748);
+}

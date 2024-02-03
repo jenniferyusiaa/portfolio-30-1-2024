@@ -1,0 +1,57 @@
+.modal {
+  position: absolute;
+  height: 400px;
+  width: 400px;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.slider {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  overflow: unset;
+  transition: all 0.5s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.image img {
+  display: block;
+  object-fit: cover;
+}
+
+.cursor {
+  position: absolute;
+  display: block;
+  background-color: blueviolet;
+  border-radius: 50%;
+  height: 90px;
+  width: 90px;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.label {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 22px;
+  height: 90px;
+  width: 90px;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  pointer-events: none;
+}

@@ -1,0 +1,213 @@
+.contact {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: black;
+  color: white;
+  height: fit-content;
+  min-height: 100dvh;
+  max-width: 100dvw;
+  padding-top: 100px;
+  padding-inline: clamp(10px, 4vw, 50px);
+  /* overflow: unset; */
+}
+
+.contact * {
+  overflow: unset;
+}
+
+.contact button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.contact button p {
+  position: relative;
+  z-index: 2;
+}
+
+.mainContainer {
+  position: relative;
+  width: 100%;
+  max-width: 1300px;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  padding-bottom: clamp(50px, 4vw, 80px);
+  border-bottom: 2px solid rgba(128, 128, 128, 0.439);
+}
+
+.title img {
+  object-fit: cover;
+  border-radius: 50%;
+  height: clamp(50px, 6vw, 100px);
+  width: clamp(50px, 6vw, 100px);
+  overflow: hidden;
+}
+
+.title h1 {
+  display: flex;
+  flex-direction: column;
+  font-size: clamp(50px, 8vw, 120px);
+  font-weight: 400;
+  overflow: unset;
+}
+
+.title span {
+  line-height: clamp(60px, 9vw, 130px);
+  overflow: unset;
+}
+
+.title span:nth-of-type(1) {
+  display: flex;
+  align-items: center;
+  gap: clamp(10px, 2vw, 30px);
+}
+
+.inTouchButton button {
+  position: absolute;
+  background-color: blueviolet;
+  color: white;
+  font-size: clamp(18px, 2vw, 25px);
+  font-weight: 500;
+  letter-spacing: -1px;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  padding-inline: clamp(35px, 3vw, 60px);
+  padding-block: clamp(60px, 6vw, 100px);
+}
+
+.inTouchButton button:hover {
+  background-color: rgb(100, 14, 181);
+}
+
+.contactButton {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-block: 80px;
+}
+
+.contactButton button {
+  border: 2px solid rgba(128, 128, 128, 0.439);
+  color: white;
+  font-size: clamp(18px, 2vw, 25px);
+  border-radius: 50px;
+  padding-block: clamp(20px, 3vw, 30px);
+  padding-inline: clamp(40px, 6vw, 60px);
+  overflow: hidden;
+}
+
+.contactButton button:hover {
+  background-color: blueviolet;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.footer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  bottom: 50px;
+  width: 98%;
+  margin-top: 100px;
+}
+
+.footer p {
+  position: relative;
+  text-transform: uppercase;
+  color: gray;
+  font-size: clamp(12px, 1vw, 15px);
+  font-weight: 600;
+  z-index: 2;
+}
+
+.footer h4 {
+  font-size: clamp(16px, 1.5vw, 20px);
+  font-weight: 500;
+}
+
+.footer a {
+  position: relative;
+  display: block;
+  font-size: clamp(16px, 1.5vw, 20px);
+  font-weight: 500;
+}
+
+.footer a::after {
+  content: "";
+  position: absolute;
+  display: block;
+  background-color: white;
+  height: 2px;
+  width: 0;
+  left: 50%;
+  bottom: -10px;
+  transform: translateX(-50%);
+}
+
+.footer a:hover::after {
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+.footerLeft {
+  display: flex;
+  align-items: center;
+  gap: clamp(20px, 3vw, 50px);
+}
+
+.footerRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.version,
+.time,
+.footerRight {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(15px, 2vw, 25px);
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  gap: clamp(17px, 2.6vw, 40px);
+}
+
+@media screen and (max-width: 720px) {
+  .contactButton {
+    flex-direction: column;
+  }
+
+  .contactButton button {
+    width: 100%;
+  }
+
+  .footer {
+    flex-direction: column-reverse;
+    width: 100%;
+  }
+
+  .footerLeft {
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 30px;
+  }
+
+  .footerRight {
+    width: 100%;
+    border-bottom: 2px solid rgba(128, 128, 128, 0.468);
+    padding-bottom: 30px;
+  }
+}

@@ -1,0 +1,107 @@
+.navSlider {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  top: 0;
+  right: 0;
+  height: 100dvh;
+  width: auto;
+  color: white;
+  z-index: 1;
+}
+
+.side {
+  content: "";
+  position: relative;
+  height: 100%;
+  background-color: black;
+  top: 0;
+  left: 70px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.navSliders {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: black;
+  z-index: 1;
+}
+
+.navigation,
+.socialsText {
+  position: relative;
+  display: block;
+  text-transform: uppercase;
+  color: gray;
+  font-size: clamp(8px, 2vw, 12px);
+  padding-bottom: 25px;
+  overflow: hidden;
+  margin-left: 500px;
+  margin-inline: clamp(60px, 7vw, 120px);
+}
+
+.navigation {
+  border-bottom: 2px solid gray;
+}
+
+.navContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-block: 40px;
+  overflow: hidden;
+  padding-inline: clamp(40px, 7vw, 80px);
+}
+
+.navLink {
+  display: flex;
+  align-items: center;
+  font-size: clamp(40px, 5vw, 70px);
+}
+
+.navLink:hover .indicator {
+  opacity: 1;
+  scale: 1;
+  transition: all 0.3s cubic-bezier(0.77, 0, 0.18, 1);
+}
+
+.indicator {
+  position: relative;
+  display: block;
+  opacity: 0;
+  scale: 0;
+  background-color: white;
+  border-radius: 50%;
+  height: 10px;
+  width: 10px;
+  margin-right: 25px;
+  transition: all 0.3s cubic-bezier(0.77, 0, 0.18, 1);
+}
+
+.anvLink a {
+  position: relative;
+  display: flex;
+}
+
+.socials {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+
+.socialsContainer {
+  position: relative;
+  display: flex;
+  gap: clamp(10px, 2vw, 40px);
+  margin-inline: clamp(60px, 7vw, 120px);
+}
+
+@media screen and (max-width: 540px) {
+  .socialsContainer {
+    flex-direction: column;
+  }
+}

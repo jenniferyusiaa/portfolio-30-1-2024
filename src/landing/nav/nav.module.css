@@ -1,0 +1,135 @@
+.nav {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  top: 0;
+  left: 0;
+  padding: clamp(20px, 3vw, 30px);
+  width: 100%;
+  color: white;
+  font-size: clamp(18px, 3vw, 22px);
+  overflow: unset;
+}
+
+.nav * {
+  overflow: unset;
+}
+
+.credit {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.credit p {
+  margin-right: 5px;
+}
+
+.credit:hover .copyright p {
+  transform: rotate(360deg);
+  transition: all 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.credit:hover .name {
+  padding-right: 140px;
+  transition: all 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.credit:hover .name p:nth-of-type(1) {
+  transform: translateX(-100%);
+  transition: all 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.credit:hover .name p:nth-of-type(2) {
+  transform: translateX(-80px);
+  transition: all 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.credit:hover .name p:nth-of-type(3) {
+  transform: translateX(-100%);
+  transition: all 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.copyright {
+  overflow: hidden;
+}
+
+.copyright p {
+  position: relative;
+  transform: rotate(0);
+  transition: all 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.nameContainer {
+  position: relative;
+  display: flex;
+}
+
+.name {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: all 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.name p {
+  position: relative;
+  display: block;
+  transition: all 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.name p:nth-of-type(3) {
+  position: absolute;
+  display: block;
+  left: 100%;
+}
+
+.navContainer {
+  position: relative;
+  display: flex;
+  /* gap: clamp(20px, 6vw, 60px); */
+  gap: 20px;
+}
+
+.navLink {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.navLink a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 75px;
+}
+
+.navLink:hover .indicator {
+  scale: 1;
+  transition: all 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.indicator {
+  position: absolute;
+  display: block;
+  background-color: white;
+  border-radius: 50%;
+  height: 7px;
+  width: 7px;
+  bottom: 0;
+  scale: 0;
+  transition: all 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+@media screen and (max-width: 540px) {
+  .navContainer {
+    display: none;
+  }
+}

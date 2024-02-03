@@ -1,0 +1,64 @@
+.preloader {
+  position: fixed;
+  display: block;
+  background-color: black;
+  min-height: 100dvh;
+  width: 100dvw;
+  z-index: 3;
+  overflow: unset;
+}
+
+.preloader * {
+  overflow: unset;
+}
+
+.text {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100dvh;
+  width: 100%;
+}
+
+.text h1 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: clamp(40px, 7vw, 75px);
+  font-weight: 400;
+  gap: 20px;
+}
+
+.text span {
+  position: relative;
+  display: block;
+  background-color: white;
+  height: 15px;
+  width: 15px;
+  left: 0;
+  top: 0;
+  border-radius: 50%;
+}
+
+.customShapeDividerBottom1706937101 {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.customShapeDividerBottom1706937101 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 229px;
+}
+
+.customShapeDividerBottom1706937101 .shapeFill {
+  fill: black;
+}

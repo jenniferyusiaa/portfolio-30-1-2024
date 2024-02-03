@@ -1,0 +1,151 @@
+.projectsList {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100dvh;
+  margin-inline: clamp(50px, 10vw, 150px);
+  margin-bottom: 100px;
+}
+
+.projectsContainer {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  border-bottom: 2px solid gainsboro;
+  padding-inline: clamp(25px, 7vw, 150px);
+  padding-block: 30px;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+
+.projectsContainer:nth-child(1) {
+  border-top: 2px solid gainsboro;
+}
+
+.projectsContainer,
+.content,
+.desc {
+  transition: all 0.3s cubic-bezier(0.77, 0, 0.18, 1);
+}
+
+.projectsContainer:hover {
+  opacity: 0.5;
+  transition: all 0.3s cubic-bezier(0.77, 0, 0.18, 1);
+}
+
+.projectsContainer:hover .content {
+  transform: translateX(-20px);
+  transition: all 0.3s cubic-bezier(0.77, 0, 0.18, 1);
+}
+
+.projectsContainer:hover .desc {
+  transform: translateX(20px);
+  transition: all 0.3s cubic-bezier(0.77, 0, 0.18, 1);
+}
+
+.content {
+  font-size: clamp(60px, 5vw, 115px);
+}
+
+.desc {
+  font-size: clamp(15px, 2vw, 25px);
+  letter-spacing: -1px;
+}
+
+.moreWork {
+  position: relative;
+  display: block;
+  margin-block: 80px;
+  margin-inline: auto;
+  overflow: unset;
+}
+
+.moreWork button {
+  background-color: transparent;
+  position: relative;
+  display: block;
+  white-space: nowrap;
+  border: 1px solid gray;
+  border-radius: 100px;
+  font-size: clamp(15px, 2vw, 25px);
+  font-weight: 400;
+  padding-block: clamp(20px, 4vw, 30px);
+  padding-inline: clamp(45px, 6vw, 55px);
+}
+
+.moreWork button:hover {
+  background-color: blueviolet;
+  color: white;
+}
+
+.mobile {
+  position: relative;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  margin-block: 50px 150px;
+}
+
+.projectsMobile {
+  position: relative;
+  display: block;
+}
+
+.mainMobile {
+  position: relative;
+  display: block;
+}
+
+.imageMobile {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: clamp(300px, 70vw, 400px);
+  width: clamp(300px, 70vw, 400px);
+}
+
+.imageMobile img {
+  position: relative;
+  display: block;
+  width: clamp(250px, 60vw, 350px);
+}
+
+.titleMobile {
+  position: relative;
+  display: block;
+  font-size: clamp(32px, 7vw, 37px);
+  border-bottom: 2px solid gainsboro;
+  padding-block: 15px;
+}
+
+.descMobile {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: clamp(17px, 3vw, 20px);
+  font-weight: 500;
+  opacity: 0.8;
+  padding-top: 15px;
+}
+
+.contentMobile {
+  position: relative;
+  display: block;
+}
+
+@media screen and (max-width: 650px) {
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: flex;
+  }
+}
