@@ -5,6 +5,7 @@
   align-items: center;
   justify-content: center;
   border-radius: 50%;
+  overflow: hidden;
 }
 
 .circle {
@@ -14,4 +15,5 @@
   border-radius: 50%;
   top: 100%;
   pointer-events: none;
+  overflow: hidden;
 }
